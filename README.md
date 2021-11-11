@@ -92,3 +92,38 @@ then open it on broswer
 ```bash
 $ cargo doc --open
 ```
+
+Add a test library
+```bash
+$ cargo new adder --lib
+```
+
+run 1 thread for test, will not use parallel
+```bash
+$ cargo test -- --test-threads=1
+```
+
+show test output
+```bash
+$ cargo test -- --show-output
+```
+
+run a single test function
+```bash
+$ cargo test tests::one_hundred
+```
+
+run multiple test with same name
+```bash
+$ cargo test add
+```
+
+run only ignored test
+```bash
+$ cargo test -- --ignored
+```
+
+test folder run test file
+```bash
+$ cargo test --test integration_test
+```
