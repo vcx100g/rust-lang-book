@@ -127,3 +127,15 @@ test folder run test file
 ```bash
 $ cargo test --test integration_test
 ```
+
+run with environment variables with arguments
+```bash
+$ CASE_INSENSITIVE=1 cargo run to poem.txt
+```
+
+output to file
+```bash
+$ cargo run > output.txt
+$ cargo run to poem.txt > output.txt
+```
+
