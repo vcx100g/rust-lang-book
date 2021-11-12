@@ -200,3 +200,14 @@ By adding --undo to the command, you can also undo a yank and allow projects to 
 ```bash
 $ cargo yank --vers 1.0.1 --undo
 ```
+
+## Installing Binaries from Crates.io
+
+```bash
+$ cargo install ripgrep
+```
+
+list all cargo packages
+```bash
+$ cargo --list 
+```
