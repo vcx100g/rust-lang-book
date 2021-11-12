@@ -139,3 +139,64 @@ $ cargo run > output.txt
 $ cargo run to poem.txt > output.txt
 ```
 
+## Build cargo release
+
+unoptimized with debug build
+```bash
+$ cargo build
+```
+
+optimized build for release
+```bash
+$ cargo build --release
+```
+
+set compile speed for build
+0-3 higher is more optimized
+```toml
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+```
+
+## Publish to crate.io
+
+check how to write doc in publish_crate
+open doc for cargo
+```bash
+$ cargo doc --open
+```
+
+[https://crates.io/](https://crates.io/)
+Create account and retrieve your API key login using terminal.
+API token and store it locally in ~/.cargo/credentials
+```bash
+$ cargo loign abcdefghijklmnopqrstuvwxyz012345
+```
+
+set package name for your crate at _Cargo.toml_
+```toml
+name = "guessing_game"
+version = "0.1.0"
+edition = "2018"
+description = "A fun game where you guess what number the computer has chosen."
+license = "MIT OR Apache-2.0"
+```
+
+publish or update new version using
+```bash
+$ cargo publish
+```
+
+Removing versions from crates.io
+
+```bash
+$ cargo yank --vers 1.0.1
+```
+
+By adding --undo to the command, you can also undo a yank and allow projects to start depending on a version again
+```bash
+$ cargo yank --vers 1.0.1 --undo
+```
