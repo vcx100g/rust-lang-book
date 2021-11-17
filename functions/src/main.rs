@@ -41,3 +41,9 @@ fn five() -> i32 {
 fn plus_one(x: i32) -> i32 {
     x + 1 // no close ; if you put will error
 }
+
+// plus two function > copilot good
+fn plus_two(x: i32) -> i32 {
+    x + 2
+}
+
